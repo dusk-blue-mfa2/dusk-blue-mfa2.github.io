@@ -202,7 +202,7 @@ a {
   border: none;
   cursor: pointer;
   transition: opacity 0.2s;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 
 .btn-light {
