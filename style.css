@@ -365,14 +365,14 @@ a {
   margin-top: 0;
 }
 
-/* zone descriptions: warm cream body copy with cyan accent on key terms,
-   matching the reference exhibition-map color treatment */
-.body-text.zones p {
-  color: rgba(224, 213, 195, 0.8);
+/* zone descriptions: plain white body copy — only the headings carry color */
+.body-text.zones p,
+.body-text.zones .highlight {
+  color: var(--fg);
 }
 
 /* each zone heading gets its own shade of blue — echoes the four
-   colour-coded zones in the floor-plan map legend (body copy stays cream) */
+   colour-coded zones in the floor-plan map legend (body copy stays white) */
 .body-text.zones h3:nth-of-type(1) { color: #AACCEA; }
 .body-text.zones h3:nth-of-type(2) { color: #74D3AE; }
 .body-text.zones h3:nth-of-type(3) { color: #4F95DB; }
