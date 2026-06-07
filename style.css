@@ -365,6 +365,16 @@ a {
   margin-top: 0;
 }
 
+/* zone descriptions: warm cream body copy with cyan accent on key terms,
+   matching the reference exhibition-map color treatment */
+.body-text.zones p {
+  color: rgba(224, 213, 195, 0.8);
+}
+
+.body-text.zones .highlight {
+  color: rgba(141, 211, 224, 0.9);
+}
+
 .signature {
   margin-top: 2rem;
   text-align: right;
