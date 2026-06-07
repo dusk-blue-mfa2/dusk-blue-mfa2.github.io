@@ -527,6 +527,10 @@ a {
   color: var(--muted);
 }
 
+.site-footer span:last-child {
+  margin-left: auto; /* push the Goldsmiths logo to the right edge, links stay grouped on the left */
+}
+
 /* ─── About page layout (mobile) ─────────────────────────────── */
 @media (max-width: 768px) {
   /* stack image above text on mobile — side-by-side left an ugly empty
