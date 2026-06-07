@@ -531,6 +531,12 @@ a {
   margin-left: auto; /* push the Goldsmiths logo to the right edge, links stay grouped on the left */
 }
 
+.footer-logo {
+  height: 48px;
+  opacity: 1;
+  flex-shrink: 0; /* keep its natural aspect ratio — without this the flex row crushes it sideways when space is tight */
+}
+
 /* ─── About page layout (mobile) ─────────────────────────────── */
 @media (max-width: 768px) {
   /* stack image above text on mobile — side-by-side left an ugly empty
@@ -608,6 +614,16 @@ a {
   .about-layout + .section {
     margin-top: 3rem;
     padding-bottom: 0.5rem;
+  }
+
+  /* the footer row is tight on a phone screen — at 48px the logo had no
+     room to keep its aspect ratio and rendered squashed; shrink it so it
+     fits naturally alongside the two links */
+  .site-footer {
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    height: 26px;
   }
 }
 
