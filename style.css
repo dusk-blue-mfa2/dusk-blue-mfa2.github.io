@@ -299,8 +299,10 @@ a {
 
 /* ─── Section / content widths ───────────────────────────────── */
 .section {
-  max-width: 960px;
-  margin: 0 auto;
+  /* no max-width/centering here — this page's titles must share the same
+     left edge as the image below them (.about-image img has margin-left: 2rem,
+     i.e. the same 2rem as this padding), otherwise "About" floats to the
+     right of the poster instead of lining up with it */
   padding: 4rem 2rem;
 }
 
