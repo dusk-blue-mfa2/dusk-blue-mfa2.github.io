@@ -190,78 +190,6 @@ a {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  /* stack image above text on mobile — side-by-side left an ugly empty
-     gap under the (short) image next to the much taller text column */
-  .about-layout {
-    flex-direction: column;
-    align-items: stretch; /* make image and text box span the same width and align edges */
-    gap: 1.5rem;
-  }
-  .about-image,
-  .map-image,
-  .body-text {
-    width: 100%;
-  }
-  .about-image,
-  .map-image {
-    flex: 0 0 auto;
-    margin-left: 0;
-  }
-  .about-image img {
-    margin-left: 0;
-  }
-  .body-text {
-    box-sizing: border-box;
-    margin-right: 0;
-    padding: 1.5rem;
-    font-size: 0.75rem;
-    line-height: 1.7;
-  }
-  .signature {
-    margin-top: 1.5rem;
-    text-decoration: underline;
-    text-align: left;
-  }
-
-  /* section heading highlight blocks */
-  .page-title,
-  .subtitle,
-  .label + h2 {
-    background: rgba(240, 240, 240, 0.06);
-  }
-  .section {
-    padding: 2.5rem 1.25rem;
-  }
-  .page-title {
-    display: inline-block;
-    padding: 0.6rem 1rem;
-  }
-  .subtitle,
-  .label + h2 {
-    padding: 0.6rem 1rem;
-  }
-
-  /* compact stacked zone list */
-  .body-text.zones {
-    font-size: 0.65rem;
-    line-height: 1.5;
-  }
-  .body-text.zones h3 {
-    margin-top: 1rem;
-  }
-  .body-text.zones p + h3 {
-    margin-top: 1rem;
-  }
-
-  .about-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 0 1.25rem 3rem;
-  }
-}
-
 /* ─── Buttons ────────────────────────────────────────────────── */
 .btn {
   display: inline-block;
@@ -597,6 +525,86 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+/* ─── About page layout (mobile) ─────────────────────────────── */
+@media (max-width: 768px) {
+  /* stack image above text on mobile — side-by-side left an ugly empty
+     gap under the (short) image next to the much taller text column */
+  .about-layout {
+    flex-direction: column;
+    align-items: stretch; /* make image and text box span the same width and align edges */
+    gap: 1.5rem;
+  }
+  .about-image,
+  .map-image,
+  .body-text {
+    width: 100%;
+  }
+  .about-image,
+  .map-image {
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
+  .about-image img {
+    margin-left: 0;
+  }
+  .body-text {
+    box-sizing: border-box;
+    margin-right: 0;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+  .signature {
+    margin-top: 1.5rem;
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  /* section heading highlight blocks */
+  .page-title,
+  .subtitle,
+  .label + h2 {
+    background: rgba(240, 240, 240, 0.06);
+  }
+  .section {
+    padding: 2.5rem 1.25rem;
+  }
+  .page-title {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+  }
+  .subtitle,
+  .label + h2 {
+    padding: 0.6rem 1rem;
+  }
+
+  /* compact stacked zone list */
+  .body-text.zones {
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+  .body-text.zones h3 {
+    margin-top: 1rem;
+  }
+  .body-text.zones p + h3 {
+    margin-top: 1rem;
+  }
+
+  .about-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 1.25rem 3rem;
+  }
+
+  /* "Venue / Exhibition Floor Plan" reads as a label for the map below it,
+     so pull it away from the about content above and tuck it close to the map */
+  .about-layout + .section {
+    margin-top: 3rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
