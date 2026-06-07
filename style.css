@@ -371,6 +371,13 @@ a {
   color: rgba(224, 213, 195, 0.8);
 }
 
+/* each zone heading gets its own shade of blue — echoes the four
+   colour-coded zones in the floor-plan map legend (body copy stays cream) */
+.body-text.zones h3:nth-of-type(1) { color: #9098D8; }
+.body-text.zones h3:nth-of-type(2) { color: #5C7FD6; }
+.body-text.zones h3:nth-of-type(3) { color: #4FC3DE; }
+.body-text.zones h3:nth-of-type(4) { color: #A9D8EA; }
+
 .body-text.zones .highlight {
   color: rgba(141, 211, 224, 0.9);
 }
