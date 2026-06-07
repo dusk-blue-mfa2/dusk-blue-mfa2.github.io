@@ -195,14 +195,24 @@ a {
      gap under the (short) image next to the much taller text column */
   .about-layout {
     flex-direction: column;
+    align-items: stretch; /* make image and text box span the same width and align edges */
     gap: 1.5rem;
   }
   .about-image,
+  .map-image,
+  .body-text {
+    width: 100%;
+  }
+  .about-image,
   .map-image {
-    flex: 0 0 100%;
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
+  .about-image img {
     margin-left: 0;
   }
   .body-text {
+    box-sizing: border-box;
     margin-right: 0;
     padding: 1.5rem;
     font-size: 0.75rem;
