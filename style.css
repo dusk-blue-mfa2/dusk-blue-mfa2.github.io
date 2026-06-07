@@ -191,26 +191,25 @@ a {
 }
 
 @media (max-width: 768px) {
-  /* keep image + text side by side, just narrower */
+  /* stack image above text on mobile — side-by-side left an ugly empty
+     gap under the (short) image next to the much taller text column */
   .about-layout {
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   .about-image,
   .map-image {
-    flex: 0 0 38%;
+    flex: 0 0 100%;
     margin-left: 0;
   }
   .body-text {
     margin-right: 0;
-    padding: 1.25rem;
-    font-size: 0.7rem;
-    line-height: 1.6;
-  }
-  .body-text h3 {
-    font-size: 0.65rem;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
   }
   .signature {
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
     text-decoration: underline;
     text-align: left;
   }
@@ -226,7 +225,11 @@ a {
   }
   .page-title {
     display: inline-block;
-    padding: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem;
+  }
+  .subtitle,
+  .label + h2 {
+    padding: 0.6rem 1rem;
   }
 
   /* compact stacked zone list */
