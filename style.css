@@ -74,17 +74,21 @@ a {
 }
 
 .nav-logo {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -104,7 +108,9 @@ a {
 /* ─── Hero ───────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  height: 100vh;
+  /* match the source video's 16:9 frame so object-fit:cover doesn't crop
+     the corner text — height:100vh would crop the title on most screens */
+  aspect-ratio: 16 / 9;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -161,6 +167,12 @@ a {
   opacity: 0.5;
   margin-bottom: 2.5rem;
   letter-spacing: 0.03em;
+}
+
+/* ─── Home recap (mobile only — the hero video carries this text too,
+   but it's illegible once cropped down to a phone screen) ───────── */
+.home-recap {
+  display: none;
 }
 
 /* ─── About page layout ──────────────────────────────────────── */
@@ -629,16 +641,43 @@ a {
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .nav-logo {
-    display: none;
-  }
-
   .nav-links {
     gap: 1.5rem;
   }
 
   .hero {
+    /* taller-than-video crop on a phone screen — corner text gets cropped
+       but the recap section below restates it in readable text */
+    aspect-ratio: 4 / 5;
     padding: 2rem 1.25rem;
+  }
+
+  .home-recap {
+    display: block;
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .home-recap .page-title {
+    margin-bottom: 1rem;
+  }
+
+  .home-recap .intro {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: rgba(240, 240, 240, 0.8);
+    margin-bottom: 2rem;
+  }
+
+  .recap-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .recap-meta .label {
+    display: block;
+    margin-bottom: 0.25rem;
   }
 
   .section,
