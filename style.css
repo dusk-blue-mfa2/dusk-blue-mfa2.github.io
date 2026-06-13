@@ -530,7 +530,7 @@ a {
 /* ─── Footer ─────────────────────────────────────────────────── */
 .site-footer {
   margin-top: 4rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: start;
@@ -547,7 +547,7 @@ a {
 }
 
 .footer-logo {
-  height: 48px;
+  height: 32px;
   opacity: 1;
   flex-shrink: 0; /* keep its natural aspect ratio — without this the flex row crushes it sideways when space is tight */
 }
