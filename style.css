@@ -41,6 +41,9 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
@@ -64,25 +67,13 @@ a {
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 2rem;
   z-index: 100;
   background: rgba(8, 8, 8, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.logo-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
 }
 
 .nav-links {
@@ -93,7 +84,7 @@ a {
 }
 
 .nav-links a {
-  font-size: 0.8125rem;
+  font-size: 1rem;
   letter-spacing: 0.04em;
   text-decoration: none;
   opacity: 0.65;
@@ -108,9 +99,11 @@ a {
 /* ─── Hero ───────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  /* match the source video's 16:9 frame so object-fit:cover doesn't crop
-     the corner text — height:100vh would crop the title on most screens */
-  aspect-ratio: 16 / 9;
+  /* fill whatever space is left after the footer, so hero + footer fit
+     in one viewport with no page scroll; object-fit:cover on the video
+     crops gently to whatever aspect that leaves */
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -646,8 +639,10 @@ a {
   }
 
   .hero {
-    /* taller-than-video crop on a phone screen — corner text gets cropped
-       but the recap section below restates it in readable text */
+    /* on a phone the page scrolls anyway, so go back to a fixed crop
+       instead of filling the viewport — taller-than-video crop loses the
+       corner text, but the recap section below restates it */
+    flex: 0 0 auto;
     aspect-ratio: 4 / 5;
     padding: 2rem 1.25rem;
   }
