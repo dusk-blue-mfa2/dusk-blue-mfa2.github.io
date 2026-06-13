@@ -79,6 +79,7 @@ a {
 .nav-logo {
   display: flex;
   align-items: center;
+  margin-top: 26px; /* the nav-links text sits lower than center due to line-height, so nudge the logo down to match (align-items:center halves the effect of this margin) */
 }
 
 .nav-logo img {
