@@ -110,8 +110,8 @@ a {
 .hero {
   position: relative;
   /* fill whatever space is left after the footer, so hero + footer fit
-     in one viewport with no page scroll; object-fit:cover on the video
-     crops gently to whatever aspect that leaves */
+     in one viewport with no page scroll; object-fit:contain on the video
+     shows the full frame, letterboxed with --bg on whatever aspect that leaves */
   flex: 1;
   min-height: 0;
   display: flex;
@@ -126,9 +126,9 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 0;
-  background: var(--bg); /* fallback if no image */
+  background: var(--bg); /* fallback if no image, and letterbox color */
 }
 
 .hero-overlay {
