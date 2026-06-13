@@ -19,7 +19,7 @@
   --fg:         #f0f0f0;
   --muted:      rgba(240, 240, 240, 0.45);
   --border:     rgba(240, 240, 240, 0.1);
-  --nav-height: 56px;
+  --nav-height: 96px;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -84,7 +84,7 @@ a {
 }
 
 .nav-links a {
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
   text-decoration: none;
   opacity: 0.65;
@@ -636,6 +636,10 @@ a {
 @media (max-width: 768px) {
   .nav-links {
     gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
   }
 
   .hero {
