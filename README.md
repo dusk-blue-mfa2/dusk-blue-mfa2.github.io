@@ -16,7 +16,7 @@ concept and gives each participating artist their own page.
 ## What's on the site
 - Curatorial concept / introduction to the exhibition
 - An individual page for each of the 12 participating artists
-- About page
+- About page 
 
 ## How to run locally
 Open `index.html` in any modern browser.
