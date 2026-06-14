@@ -66,5 +66,35 @@
     <span><img src="../assets/goldsmiths-logo-white.png" alt="Goldsmiths" class="footer-logo"></span>
   </footer>
 
+<div id="image-lightbox" class="image-lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-image" src="" alt="">
+</div>
+
+<script>
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImage = document.querySelector('.lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  zoomableImages.forEach(function(image) {
+    image.addEventListener('click', function() {
+      lightbox.style.display = 'flex';
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+    });
+  });
+
+  lightboxClose.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
