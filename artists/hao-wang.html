@@ -29,12 +29,12 @@
 
       <div class="project-gallery">
         <div class="project-main-image">
-          <img src="../assets/artists/hao-wang-1.jpg" alt="Project Title" class="zoomable">
+          <img src="../assets/artists/hao-wang-1.jpg" alt="Project Title" >
         </div>
         <div class="project-thumbs">
-          <div class="project-thumb"><img src="../assets/artists/hao-wang-2.jpg" alt="" class="zoomable"> </div>
-          <div class="project-thumb"><img src="../assets/artists/hao-wang-3.jpg" alt="" class="zoomable"> </div>
-          <div class="project-thumb"><img src="../assets/artists/hao-wang-4.jpg" alt="" class="zoomable"> </div>
+          <div class="project-thumb"><img src="../assets/artists/hao-wang-2.jpg" alt=""> </div>
+          <div class="project-thumb"><img src="../assets/artists/hao-wang-3.jpg" alt=""> </div>
+          <div class="project-thumb"><img src="../assets/artists/hao-wang-4.jpg" alt=""> </div>
         </div>
         <div class="project-main-image project-secondary-image">
           <img src="../assets/artists/hao-wang-5.jpg" alt="Project Title">
@@ -65,36 +65,6 @@
     <span><a href="https://www.gold.ac.uk/cookies-statement/">Cookie use</a></span>
     <span><img src="../assets/goldsmiths-logo-white.png" alt="Goldsmiths" class="footer-logo"></span>
   </footer>
-
-<div id="image-lightbox" class="image-lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-image" src="" alt="">
-</div>
-
-<script>
-  const zoomableImages = document.querySelectorAll('.zoomable');
-  const lightbox = document.getElementById('image-lightbox');
-  const lightboxImage = document.querySelector('.lightbox-image');
-  const lightboxClose = document.querySelector('.lightbox-close');
-
-  zoomableImages.forEach(function(image) {
-    image.addEventListener('click', function() {
-      lightbox.style.display = 'flex';
-      lightboxImage.src = image.src;
-      lightboxImage.alt = image.alt;
-    });
-  });
-
-  lightboxClose.addEventListener('click', function() {
-    lightbox.style.display = 'none';
-  });
-
-  lightbox.addEventListener('click', function(event) {
-    if (event.target === lightbox) {
-      lightbox.style.display = 'none';
-    }
-  });
-</script>
 
 </body>
 </html>
