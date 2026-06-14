@@ -438,10 +438,18 @@ a {
 }
 
 .project-artist-name {
+  font-family: 'BalbesFree', sans-serif;
   font-size: 0.875rem;
-  color: var(--muted);
+  /* color: var(--muted); */
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
+}
+
+.project-artist-bio {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
 .project-main-image {
@@ -761,6 +769,29 @@ a {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Lightbox (click image to enlarge) ────────────────────── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
 
